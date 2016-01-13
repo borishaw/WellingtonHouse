@@ -16,8 +16,8 @@ $('window').ready(function () {
         e.preventDefault();
         var formData = JSON.stringify($('#contact').serializeArray());
         $.post('process.php', formData, function(resp){
-            //resp = $.parseJSON(resp);
-            //$(".jquery-response p").html(resp.message);
+            resp = $.parseJSON(resp);
+            $(".jquery-response p").html(resp.message);
             console.log(resp);
         });
     });
