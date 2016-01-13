@@ -39,7 +39,7 @@ if ($resp->isSuccess()) {
     unset($formDataArray['g-recaptcha-response']);
     $mail = new PHPMailer();
     $mail->setFrom($formDataArray['Email'], $formDataArray['Name']);
-    $mail->addAddress('boris@ankitdesigns.com', 'Boris');
+    $mail->addAddress('julie@ankitdesigns.com', 'Julie');
     $mail->isHTML(true);
     $mail->Subject = 'New Registration';
 
@@ -48,14 +48,15 @@ if ($resp->isSuccess()) {
         $mail->Body .= $key . ': ' . $value. '<br/>';
     }
     if(!$mail->send()) {
-        echo json_encode(['success' => 0, 'message' => 'Message could not be sent.' . ' Mailer Error: ' . $mail->ErrorInfo]);
-        die;
+        $json_response['message'] = 'Message could not be sent.' . ' Mailer Error: ' . $mail->ErrorInfo;
+        die(json_encode($json_response));
     } else {
-        echo json_encode(['success' => 1, 'message' => 'Message has been sent']);
-        exit;
+        $json_response['message'] = 'Message has been sent';
+        $json_response['success'] = 1;
+        exit(json_encode($json_response));
     }
 } else {
     $errors = $resp->getErrorCodes();
-    echo json_encode(['success' => 0, 'message' => 'ReCaptcha Failed. Error Code: '. print_r($errors)]);
-    die;
+    $json_response['message'] = 'ReCaptcha Failed. Error Code: '. print_r($errors);
+    die(json_encode($json_response));
 }
