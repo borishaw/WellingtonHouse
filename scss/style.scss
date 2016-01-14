@@ -131,7 +131,7 @@ header {
 footer {
 	width: 100%;
 	margin-bottom: 10px;
-	margin-top: -40px;
+	margin-top: 30px;
 	text-align: center;
 	font: {
 		size: 13px;
@@ -154,7 +154,7 @@ footer {
 	width: 100%;
 	max-width: 650px;
 	margin: 0 auto;
-	height: 100%;
+	height: auto;
 	position: relative;
 }
 
@@ -219,6 +219,8 @@ select {
 	}
 	background-color: transparent;
 	color: $white;
+	text-overflow: ellipsis;
+	padding-right: 45px;
 	
 }
 
@@ -230,12 +232,26 @@ button#submit {
     text-transform: uppercase;
 }
 
+.jquery-response {
+    text-align: center;
+    padding-top: 20px;
+	 font: {
+		size: 14px;
+		size: 1.4rem;
+		style: italic;
+	 }
+	 color: $brown-light;
+}
 
 
 /* --------------- Responsive --------------- */
 
 
 @media screen and (min-width: 992px) and (min-height: 800px) {
+	
+	.main-content {
+		height: 100%;
+	}
 	
 	header {
 		position: absolute;
@@ -245,13 +261,14 @@ button#submit {
 		@include vertical-align;
 	}
 	
+	footer {
+		margin-top: -40px;
+	}
+	
 }
 
 @media screen and (max-width: 991px) {
 	
-	.main-content {
-		height: auto;
-	}
 	
 	header {
 		text-align: center;
@@ -279,6 +296,12 @@ button#submit {
 
 @media screen and (max-width: 768px) {
 	
+	.row {
+		margin: {
+			left: 0;
+			right: 0;
+		}
+	}
 	
 	.overlay-bg{
 		background: rgba($black, 0.7);

@@ -179,7 +179,7 @@ header {
 footer {
   width: 100%;
   margin-bottom: 10px;
-  margin-top: -40px;
+  margin-top: 30px;
   text-align: center;
   font-size: 13px;
   font-size: 1.3rem;
@@ -205,7 +205,7 @@ footer a:hover {
   width: 100%;
   max-width: 650px;
   margin: 0 auto;
-  height: 100%;
+  height: auto;
   position: relative;
 }
 
@@ -379,9 +379,11 @@ select {
   border-bottom: 1px solid white;
   background-color: transparent;
   color: white;
+  text-overflow: ellipsis;
+  padding-right: 45px;
 }
 
-/* line 225, ../scss/style.scss */
+/* line 227, ../scss/style.scss */
 button#submit {
   background-color: black;
   border: 1px solid #8c6239;
@@ -390,14 +392,29 @@ button#submit {
   text-transform: uppercase;
 }
 
+/* line 235, ../scss/style.scss */
+.jquery-response {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #8c6239;
+}
+
 /* --------------- Responsive --------------- */
 @media screen and (min-width: 992px) and (min-height: 800px) {
-  /* line 240, ../scss/style.scss */
+  /* line 252, ../scss/style.scss */
+  .main-content {
+    height: 100%;
+  }
+
+  /* line 256, ../scss/style.scss */
   header {
     position: absolute;
   }
 
-  /* line 244, ../scss/style.scss */
+  /* line 260, ../scss/style.scss */
   .form-wrapper {
     position: relative;
     top: 50%;
@@ -405,47 +422,53 @@ button#submit {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
+
+  /* line 264, ../scss/style.scss */
+  footer {
+    margin-top: -40px;
+  }
 }
 @media screen and (max-width: 991px) {
-  /* line 252, ../scss/style.scss */
-  .main-content {
-    height: auto;
-  }
-
-  /* line 256, ../scss/style.scss */
+  /* line 273, ../scss/style.scss */
   header {
     text-align: center;
   }
 
-  /* line 260, ../scss/style.scss */
+  /* line 277, ../scss/style.scss */
   .lamb-logos {
     float: none;
   }
 
-  /* line 264, ../scss/style.scss */
+  /* line 281, ../scss/style.scss */
   .social {
     text-align: center;
     margin: 40px 0 20px 0;
   }
 
-  /* line 269, ../scss/style.scss */
+  /* line 286, ../scss/style.scss */
   button#submit {
     margin: 20px auto 0;
     display: block;
   }
 
-  /* line 274, ../scss/style.scss */
+  /* line 291, ../scss/style.scss */
   footer {
     margin-top: 40px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 283, ../scss/style.scss */
+  /* line 299, ../scss/style.scss */
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 306, ../scss/style.scss */
   .overlay-bg {
     background: rgba(0, 0, 0, 0.7);
   }
 
-  /* line 287, ../scss/style.scss */
+  /* line 310, ../scss/style.scss */
   .form-wrapper {
     border: none;
     background: transparent;
