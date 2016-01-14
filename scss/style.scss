@@ -292,6 +292,13 @@ button#submit {
 		display: block;
 	}
 	
+	.recaptcha-wrapper{
+		text-align: center;
+	}
+	.g-recaptcha {
+		display: inline-block;
+	}
+	
 	footer {
 		margin-top: 40px;
 	}

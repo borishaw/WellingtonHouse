@@ -461,23 +461,33 @@ button#submit:hover {
   }
 
   /* line 295, ../scss/style.scss */
+  .recaptcha-wrapper {
+    text-align: center;
+  }
+
+  /* line 298, ../scss/style.scss */
+  .g-recaptcha {
+    display: inline-block;
+  }
+
+  /* line 302, ../scss/style.scss */
   footer {
     margin-top: 40px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 303, ../scss/style.scss */
+  /* line 310, ../scss/style.scss */
   .row {
     margin-left: 0;
     margin-right: 0;
   }
 
-  /* line 310, ../scss/style.scss */
+  /* line 317, ../scss/style.scss */
   .overlay-bg {
     background: rgba(0, 0, 0, 0.7);
   }
 
-  /* line 314, ../scss/style.scss */
+  /* line 321, ../scss/style.scss */
   .form-wrapper {
     border: none;
     background: transparent;
