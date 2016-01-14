@@ -225,11 +225,16 @@ select {
 }
 
 button#submit {
+	@include transition(0.3s);
     background-color: $black;
     border: 1px solid $brown-light;
     padding: 20px 25px;
     font-weight: 700;
     text-transform: uppercase;
+	 cursor: pointer;
+	 &:hover {
+		background-color: $brown-light;
+	 }
 }
 
 .jquery-response {
@@ -240,7 +245,6 @@ button#submit {
 		size: 1.4rem;
 		style: italic;
 	 }
-	 color: $brown-light;
 }
 
 

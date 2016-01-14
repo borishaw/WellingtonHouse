@@ -385,36 +385,45 @@ select {
 
 /* line 227, ../scss/style.scss */
 button#submit {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   background-color: black;
   border: 1px solid #8c6239;
   padding: 20px 25px;
   font-weight: 700;
   text-transform: uppercase;
+  cursor: pointer;
+}
+/* line 235, ../scss/style.scss */
+button#submit:hover {
+  background-color: #8c6239;
 }
 
-/* line 235, ../scss/style.scss */
+/* line 240, ../scss/style.scss */
 .jquery-response {
   text-align: center;
   padding-top: 20px;
   font-size: 14px;
   font-size: 1.4rem;
   font-style: italic;
-  color: #8c6239;
 }
 
 /* --------------- Responsive --------------- */
 @media screen and (min-width: 992px) and (min-height: 800px) {
-  /* line 252, ../scss/style.scss */
+  /* line 256, ../scss/style.scss */
   .main-content {
     height: 100%;
   }
 
-  /* line 256, ../scss/style.scss */
+  /* line 260, ../scss/style.scss */
   header {
     position: absolute;
   }
 
-  /* line 260, ../scss/style.scss */
+  /* line 264, ../scss/style.scss */
   .form-wrapper {
     position: relative;
     top: 50%;
@@ -423,52 +432,52 @@ button#submit {
     transform: translateY(-50%);
   }
 
-  /* line 264, ../scss/style.scss */
+  /* line 268, ../scss/style.scss */
   footer {
     margin-top: -40px;
   }
 }
 @media screen and (max-width: 991px) {
-  /* line 273, ../scss/style.scss */
+  /* line 277, ../scss/style.scss */
   header {
     text-align: center;
   }
 
-  /* line 277, ../scss/style.scss */
+  /* line 281, ../scss/style.scss */
   .lamb-logos {
     float: none;
   }
 
-  /* line 281, ../scss/style.scss */
+  /* line 285, ../scss/style.scss */
   .social {
     text-align: center;
     margin: 40px 0 20px 0;
   }
 
-  /* line 286, ../scss/style.scss */
+  /* line 290, ../scss/style.scss */
   button#submit {
     margin: 20px auto 0;
     display: block;
   }
 
-  /* line 291, ../scss/style.scss */
+  /* line 295, ../scss/style.scss */
   footer {
     margin-top: 40px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 299, ../scss/style.scss */
+  /* line 303, ../scss/style.scss */
   .row {
     margin-left: 0;
     margin-right: 0;
   }
 
-  /* line 306, ../scss/style.scss */
+  /* line 310, ../scss/style.scss */
   .overlay-bg {
     background: rgba(0, 0, 0, 0.7);
   }
 
-  /* line 310, ../scss/style.scss */
+  /* line 314, ../scss/style.scss */
   .form-wrapper {
     border: none;
     background: transparent;
