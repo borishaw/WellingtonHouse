@@ -1,5 +1,6 @@
 $('window').ready(function () {
 
+	
 
     $(document).ajaxStart(function(){
        console.log('AJAX has started');

@@ -12,6 +12,10 @@ html, body {
 	height: 100%;
 }
 
+html {
+	font-size:62.5%;
+}
+
 body {
 	background: {
 		image: url('../img/bg-03.jpg');
@@ -19,6 +23,20 @@ body {
 		size: cover;
 		attachment: fixed;
 	}
+	color: $white;
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	font: {
+		size: 18px;
+		size: 1.8rem;
+	}
+	line-height: 20px;
+	line-height: 2.0rem;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+	max-width: 100%;
 }
 
 .row {
@@ -40,13 +58,25 @@ body {
 
 /* --------------- Typography --------------- */
 
+h1 {
+	text-align: center;
+	font: {
+		size: 36px;
+		size: 3.6rem;
+		weight: 200;
+	}
+	margin-bottom: 25px;
+}
 
+p {
+	margin-bottom: 10px;
+}
 
 /* --------------- Header --------------- */
 
 header {
 	margin-top: 30px;
-	position: absolute;
+	margin-bottom: 30px;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -64,13 +94,57 @@ header {
 
 // Social Buttons
 .social {
-	margin-top: 10px;
+	margin: {
+		top: 10px;
+		right: 20px;
+	}
+	text-align: right;
 }
 
 .social-fb {
+	@include transition(0.3s);
 	width: 35px;
 	height: 35px;
 	background: $brown-dark;
+	display: inline-block;
+	text-align: center;
+	padding-top: 7px;
+	margin-left: 10px;
+	color: $white;
+	&:hover {
+		background: $black;
+		color: $brown-light;
+	}
+}
+
+.social-tw {
+	@extend .social-fb;
+}
+
+.social-ig {
+	@extend .social-fb;
+}
+
+
+/* --------------- Footer --------------- */
+
+footer {
+	width: 100%;
+	margin-bottom: 10px;
+	margin-top: -40px;
+	text-align: center;
+	font: {
+		size: 13px;
+		size: 1.3rem;
+	}
+	a {
+		@include transition(0.3s);
+		color: $brown-light;
+		&:hover {
+			color: $white;
+			text-decoration: none;
+		}
+	}
 }
 
 
@@ -87,10 +161,85 @@ header {
 .form-wrapper {
 	border: 1px solid $brown-light;
 	background: rgba(0,0,0,0.7);
-	padding: 40px;
+	padding: 40px 20px;
 }
 
-@media screen and (min-width: 991px) {
+@import 'partials/input';
+
+label.error {
+    position: absolute;
+	 font: {
+		size: 12px;
+		size: 1.2rem;
+		weight: 700;
+	 }
+    color: #F32F0C;
+    margin-top: -10px;
+}
+
+.disclaimer-text {
+	padding: 0 0 20px 0;
+	text-align: center;
+	font: {
+		size: 11px;
+		size: 1.1rem;
+		style: italic;
+	}
+	line-height: 14px;
+	line-height: 1.4rem;
+}
+
+.select-wrapper {
+	margin: 0 0 40px;
+	position: relative;
+	&:after {
+		content: '\f107';
+		font-family: 'fontAwesome';
+		position: absolute;
+		right: 15px;
+		top: 13px;
+	}
+	label.error {
+		position: static;
+	}
+}
+
+select {
+	width: 100%;
+	height: 40px;
+	-webkit-appearance: none;
+   -moz-appearance:    none;
+   appearance:         none;
+	border-radius: 0;
+	border: {
+		top: none;
+		left: none;
+		right: none;
+		bottom: 1px solid $white;
+	}
+	background-color: transparent;
+	color: $white;
+	
+}
+
+button#submit {
+    background-color: $black;
+    border: 1px solid $brown-light;
+    padding: 20px 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+
+/* --------------- Responsive --------------- */
+
+
+@media screen and (min-width: 992px) and (min-height: 800px) {
+	
+	header {
+		position: absolute;
+	}
 	
 	.form-wrapper {
 		@include vertical-align;
@@ -98,3 +247,46 @@ header {
 	
 }
 
+@media screen and (max-width: 991px) {
+	
+	.main-content {
+		height: auto;
+	}
+	
+	header {
+		text-align: center;
+	}
+	
+	.lamb-logos {
+		float: none;
+	}
+	
+	.social {
+		text-align: center;
+		margin: 40px 0 20px 0;
+	}
+	
+	button#submit {
+		margin: 20px auto 0;
+		display: block;
+	}
+	
+	footer {
+		margin-top: 40px;
+	}
+	
+}
+
+@media screen and (max-width: 768px) {
+	
+	
+	.overlay-bg{
+		background: rgba($black, 0.7);
+	}
+	
+	.form-wrapper {
+		border: none;
+		background: transparent;
+		text-align: center;
+	}
+}
