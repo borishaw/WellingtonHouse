@@ -1,6 +1,9 @@
 // Registration Page Styles
 
+@import 'partials/mixins'; // Mixins & Variables
 @import 'partials/reset'; // Reset CSS
+
+/* --------------- Framework --------------- */
 
 // Background
 
@@ -18,6 +21,13 @@ body {
 	}
 }
 
+.row {
+	margin: {
+		left: 20px;
+		right: 20px;
+	}
+}
+
 .overlay-bg {
 	position: fixed;
 	top: 0;
@@ -26,5 +36,65 @@ body {
 	right: 0;
 	background: rgba(0,0,0,0.4);
 	z-index: -1;
+}
+
+/* --------------- Typography --------------- */
+
+
+
+/* --------------- Header --------------- */
+
+header {
+	margin-top: 30px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.logo {
+	padding-top: 25px;
+}
+
+.lamb-logos {
+	float: right;
+	vertical-align: bottom;
+}
+
+
+// Social Buttons
+.social {
+	margin-top: 10px;
+}
+
+.social-fb {
+	width: 35px;
+	height: 35px;
+	background: $brown-dark;
+}
+
+
+/* --------------- Form --------------- */
+
+.main-content {
+	width: 100%;
+	max-width: 650px;
+	margin: 0 auto;
+	height: 100%;
+	position: relative;
+}
+
+.form-wrapper {
+	border: 1px solid $brown-light;
+	background: rgba(0,0,0,0.7);
+	padding: 40px;
+}
+
+@media screen and (min-width: 991px) {
+	
+	.form-wrapper {
+		@include vertical-align;
+	}
+	
 }
 
