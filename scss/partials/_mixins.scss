@@ -3,7 +3,9 @@
 $white: #fff;
 $brown-light: #8C6239;
 $brown-dark: #603813;
-$black: #000;
+$grey: #a7a7a7;
+$grey-dark: darken($grey,10%);
+$black: #222;
 
 
 @mixin transition($speed) {

@@ -17,13 +17,8 @@ html {
 }
 
 body {
-	background: {
-		image: url('../img/bg-03.jpg');
-		position: center;
-		size: cover;
-		attachment: fixed;
-	}
-	color: $white;
+	background: $white;
+	color: $black;
 	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 	font: {
 		size: 18px;
@@ -46,15 +41,6 @@ img {
 	}
 }
 
-.overlay-bg {
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	background: rgba(0,0,0,0.4);
-	z-index: -1;
-}
 
 /* --------------- Typography --------------- */
 
@@ -72,6 +58,13 @@ p {
 	margin-bottom: 10px;
 }
 
+a {
+	color: $grey-dark;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
 /* --------------- Header --------------- */
 
 header {
@@ -80,49 +73,11 @@ header {
 	top: 0;
 	left: 0;
 	right: 0;
+	text-align: center;
 }
 
 .logo {
 	padding-top: 25px;
-}
-
-.lamb-logos {
-	float: right;
-	vertical-align: bottom;
-}
-
-
-// Social Buttons
-.social {
-	margin: {
-		top: 10px;
-		right: 20px;
-	}
-	text-align: right;
-}
-
-.social-fb {
-	@include transition(0.3s);
-	width: 35px;
-	height: 35px;
-	background: $brown-dark;
-	display: inline-block;
-	text-align: center;
-	padding-top: 7px;
-	margin-left: 10px;
-	color: $white;
-	&:hover {
-		background: $black;
-		color: $brown-light;
-	}
-}
-
-.social-tw {
-	@extend .social-fb;
-}
-
-.social-ig {
-	@extend .social-fb;
 }
 
 
@@ -139,9 +94,9 @@ footer {
 	}
 	a {
 		@include transition(0.3s);
-		color: $brown-light;
+		color: $grey-dark;
 		&:hover {
-			color: $white;
+			color: $black;
 			text-decoration: none;
 		}
 	}
@@ -159,9 +114,9 @@ footer {
 }
 
 .form-wrapper {
-	border: 1px solid $brown-light;
-	background: rgba(0,0,0,0.7);
+	border: 1px solid $black;
 	padding: 40px 20px;
+	margin-bottom: 50px;
 }
 
 @import 'partials/input';
@@ -215,10 +170,10 @@ select {
 		top: none;
 		left: none;
 		right: none;
-		bottom: 1px solid $white;
+		bottom: 1px solid $grey;
 	}
 	background-color: transparent;
-	color: $white;
+	color: $black;
 	text-overflow: ellipsis;
 	padding-right: 45px;
 	
@@ -226,14 +181,14 @@ select {
 
 button#submit {
 	@include transition(0.3s);
-    background-color: $black;
-    border: 1px solid $brown-light;
+    background-color: $white;
+    border: 1px solid $grey;
     padding: 20px 25px;
     font-weight: 700;
     text-transform: uppercase;
 	 cursor: pointer;
 	 &:hover {
-		background-color: $brown-light;
+		border-color: $black;
 	 }
 }
 
@@ -248,27 +203,66 @@ button#submit {
 }
 
 
+/* --------------- Below Form --------------- */
+
+
+.lamb-logos {
+	text-align: center;
+	img {
+		margin: 0 10px;
+	}
+}
+
+
+// Social Buttons
+.social {
+	margin: {
+		top: 20px;
+		right: 20px;
+		bottom: 75px;
+	}
+}
+
+.social-fb {
+	@include transition(0.3s);
+	width: 35px;
+	height: 35px;
+	background: $black;
+	display: inline-block;
+	text-align: center;
+	padding-top: 7px;
+	margin-left: 10px;
+	color: $white;
+	&:hover {
+		background: #3b5998;
+		color: $white;
+	}
+}
+
+.social-tw {
+	@extend .social-fb;
+	&:hover {
+		background: #55acee;
+	}
+}
+
+.social-ig {
+	@extend .social-fb;
+	&:hover {
+		background: #3f729b;
+	}
+}
+
+
 /* --------------- Responsive --------------- */
 
 
 @media screen and (min-width: 992px) and (min-height: 800px) {
 	
-	.main-content {
-		height: 100%;
-	}
-	
-	header {
-		position: absolute;
-	}
-	
-	.form-wrapper {
-		@include vertical-align;
-	}
-	
-	footer {
-		margin-top: -40px;
-	}
-	
+
+
+
+
 }
 
 @media screen and (max-width: 991px) {
@@ -277,16 +271,7 @@ button#submit {
 	header {
 		text-align: center;
 	}
-	
-	.lamb-logos {
-		float: none;
-	}
-	
-	.social {
-		text-align: center;
-		margin: 40px 0 20px 0;
-	}
-	
+
 	button#submit {
 		margin: 20px auto 0;
 		display: block;

@@ -17,7 +17,7 @@
 	border: none;
 	border-radius: 0;
 	background: #f0f0f0;
-	color: $white;
+	color: $black;
 	-webkit-appearance: none; /* for box shadows to show on iOS */
 }
 
@@ -30,7 +30,7 @@
 	float: right;
 	padding: 0 1em;
 	width: 40%;
-	color: $white;
+	color: $black;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -51,7 +51,7 @@
 	background: transparent;
 	padding: 0.5em 0;
 	margin-bottom: 2em;
-	color: #fff;
+	color: $black;
 }
 
 .input__label--ruri {
@@ -68,7 +68,7 @@
 	position: absolute;
 	width: 100%;
 	height: 1px;
-	background: $white;
+	background: $grey;
 	left: 0;
 	top: 100%;
 	-webkit-transform-origin: 50% 100%;
@@ -87,12 +87,12 @@
 
 .input__field--ruri:focus + .input__label--ruri::after,
 .input--filled .input__label--ruri::after {
-	background: $brown-light;
+	background: $grey;
 }
 
 .input__field--ruri:focus + .input__label--ruri .input__label-content--ruri,
 .input--filled .input__label--ruri .input__label-content--ruri {
-	color: $brown-light;
+	color: $grey;
 	font-weight: 700;
 	-webkit-transform: translate3d(0, 2em, 0) scale3d(0.655, 0.655, 1);
 	transform: translate3d(0, 2em, 0) scale3d(0.655, 0.655, 1);

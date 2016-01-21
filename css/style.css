@@ -73,11 +73,8 @@ html {
 
 /* line 19, ../scss/style.scss */
 body {
-  background-image: url("../img/bg-03.jpg");
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  color: white;
+  background: white;
+  color: #222222;
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   font-size: 18px;
   font-size: 1.8rem;
@@ -87,30 +84,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 38, ../scss/style.scss */
+/* line 33, ../scss/style.scss */
 img {
   max-width: 100%;
 }
 
-/* line 42, ../scss/style.scss */
+/* line 37, ../scss/style.scss */
 .row {
   margin-left: 20px;
   margin-right: 20px;
 }
 
-/* line 49, ../scss/style.scss */
-.overlay-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: -1;
-}
-
 /* --------------- Typography --------------- */
-/* line 61, ../scss/style.scss */
+/* line 47, ../scss/style.scss */
 h1 {
   text-align: center;
   font-size: 36px;
@@ -119,63 +105,38 @@ h1 {
   margin-bottom: 25px;
 }
 
-/* line 71, ../scss/style.scss */
+/* line 57, ../scss/style.scss */
 p {
   margin-bottom: 10px;
 }
 
+/* line 61, ../scss/style.scss */
+a {
+  color: #8d8d8d;
+}
+/* line 63, ../scss/style.scss */
+a:hover {
+  text-decoration: none;
+}
+
 /* --------------- Header --------------- */
-/* line 77, ../scss/style.scss */
+/* line 70, ../scss/style.scss */
 header {
   margin-top: 30px;
   margin-bottom: 30px;
   top: 0;
   left: 0;
   right: 0;
+  text-align: center;
 }
 
-/* line 85, ../scss/style.scss */
+/* line 79, ../scss/style.scss */
 .logo {
   padding-top: 25px;
 }
 
-/* line 89, ../scss/style.scss */
-.lamb-logos {
-  float: right;
-  vertical-align: bottom;
-}
-
-/* line 96, ../scss/style.scss */
-.social {
-  margin-top: 10px;
-  margin-right: 20px;
-  text-align: right;
-}
-
-/* line 104, ../scss/style.scss */
-.social-fb, .social-tw, .social-ig {
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  width: 35px;
-  height: 35px;
-  background: #603813;
-  display: inline-block;
-  text-align: center;
-  padding-top: 7px;
-  margin-left: 10px;
-  color: white;
-}
-/* line 114, ../scss/style.scss */
-.social-fb:hover, .social-tw:hover, .social-ig:hover {
-  background: black;
-  color: #8c6239;
-}
-
 /* --------------- Footer --------------- */
-/* line 131, ../scss/style.scss */
+/* line 86, ../scss/style.scss */
 footer {
   width: 100%;
   margin-bottom: 10px;
@@ -184,23 +145,23 @@ footer {
   font-size: 13px;
   font-size: 1.3rem;
 }
-/* line 140, ../scss/style.scss */
+/* line 95, ../scss/style.scss */
 footer a {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  color: #8c6239;
+  color: #8d8d8d;
 }
-/* line 143, ../scss/style.scss */
+/* line 98, ../scss/style.scss */
 footer a:hover {
-  color: white;
+  color: #222222;
   text-decoration: none;
 }
 
 /* --------------- Form --------------- */
-/* line 153, ../scss/style.scss */
+/* line 108, ../scss/style.scss */
 .main-content {
   width: 100%;
   max-width: 650px;
@@ -209,11 +170,11 @@ footer a:hover {
   position: relative;
 }
 
-/* line 161, ../scss/style.scss */
+/* line 116, ../scss/style.scss */
 .form-wrapper {
-  border: 1px solid #8c6239;
-  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #222222;
   padding: 40px 20px;
+  margin-bottom: 50px;
 }
 
 /* line 3, ../scss/partials/_input.scss */
@@ -235,7 +196,7 @@ footer a:hover {
   border: none;
   border-radius: 0;
   background: #f0f0f0;
-  color: white;
+  color: #222222;
   -webkit-appearance: none;
   /* for box shadows to show on iOS */
 }
@@ -251,7 +212,7 @@ footer a:hover {
   float: right;
   padding: 0 1em;
   width: 40%;
-  color: white;
+  color: #222222;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -274,7 +235,7 @@ footer a:hover {
   background: transparent;
   padding: 0.5em 0;
   margin-bottom: 2em;
-  color: #fff;
+  color: #222222;
 }
 
 /* line 57, ../scss/partials/_input.scss */
@@ -293,7 +254,7 @@ footer a:hover {
   position: absolute;
   width: 100%;
   height: 1px;
-  background: white;
+  background: #a7a7a7;
   left: 0;
   top: 100%;
   -webkit-transform-origin: 50% 100%;
@@ -314,19 +275,19 @@ footer a:hover {
 /* line 89, ../scss/partials/_input.scss */
 .input__field--ruri:focus + .input__label--ruri::after,
 .input--filled .input__label--ruri::after {
-  background: #8c6239;
+  background: #a7a7a7;
 }
 
 /* line 94, ../scss/partials/_input.scss */
 .input__field--ruri:focus + .input__label--ruri .input__label-content--ruri,
 .input--filled .input__label--ruri .input__label-content--ruri {
-  color: #8c6239;
+  color: #a7a7a7;
   font-weight: 700;
   -webkit-transform: translate3d(0, 2em, 0) scale3d(0.655, 0.655, 1);
   transform: translate3d(0, 2em, 0) scale3d(0.655, 0.655, 1);
 }
 
-/* line 169, ../scss/style.scss */
+/* line 124, ../scss/style.scss */
 label.error {
   position: absolute;
   font-size: 12px;
@@ -336,7 +297,7 @@ label.error {
   margin-top: -10px;
 }
 
-/* line 180, ../scss/style.scss */
+/* line 135, ../scss/style.scss */
 .disclaimer-text {
   padding: 0 0 20px 0;
   text-align: center;
@@ -347,12 +308,12 @@ label.error {
   line-height: 1.4rem;
 }
 
-/* line 192, ../scss/style.scss */
+/* line 147, ../scss/style.scss */
 .select-wrapper {
   margin: 0 0 40px;
   position: relative;
 }
-/* line 195, ../scss/style.scss */
+/* line 150, ../scss/style.scss */
 .select-wrapper:after {
   content: '\f107';
   font-family: 'fontAwesome';
@@ -360,12 +321,12 @@ label.error {
   right: 15px;
   top: 13px;
 }
-/* line 202, ../scss/style.scss */
+/* line 157, ../scss/style.scss */
 .select-wrapper label.error {
   position: static;
 }
 
-/* line 207, ../scss/style.scss */
+/* line 162, ../scss/style.scss */
 select {
   width: 100%;
   height: 40px;
@@ -376,33 +337,33 @@ select {
   border-top: none;
   border-left: none;
   border-right: none;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #a7a7a7;
   background-color: transparent;
-  color: white;
+  color: #222222;
   text-overflow: ellipsis;
   padding-right: 45px;
 }
 
-/* line 227, ../scss/style.scss */
+/* line 182, ../scss/style.scss */
 button#submit {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  background-color: black;
-  border: 1px solid #8c6239;
+  background-color: white;
+  border: 1px solid #a7a7a7;
   padding: 20px 25px;
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
 }
-/* line 235, ../scss/style.scss */
+/* line 190, ../scss/style.scss */
 button#submit:hover {
-  background-color: #8c6239;
+  border-color: #222222;
 }
 
-/* line 240, ../scss/style.scss */
+/* line 195, ../scss/style.scss */
 .jquery-response {
   text-align: center;
   padding-top: 20px;
@@ -411,83 +372,96 @@ button#submit:hover {
   font-style: italic;
 }
 
-/* --------------- Responsive --------------- */
-@media screen and (min-width: 992px) and (min-height: 800px) {
-  /* line 256, ../scss/style.scss */
-  .main-content {
-    height: 100%;
-  }
-
-  /* line 260, ../scss/style.scss */
-  header {
-    position: absolute;
-  }
-
-  /* line 264, ../scss/style.scss */
-  .form-wrapper {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-
-  /* line 268, ../scss/style.scss */
-  footer {
-    margin-top: -40px;
-  }
+/* --------------- Below Form --------------- */
+/* line 209, ../scss/style.scss */
+.lamb-logos {
+  text-align: center;
 }
+/* line 211, ../scss/style.scss */
+.lamb-logos img {
+  margin: 0 10px;
+}
+
+/* line 218, ../scss/style.scss */
+.social {
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 75px;
+}
+
+/* line 226, ../scss/style.scss */
+.social-fb, .social-tw, .social-ig {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: 35px;
+  height: 35px;
+  background: #222222;
+  display: inline-block;
+  text-align: center;
+  padding-top: 7px;
+  margin-left: 10px;
+  color: white;
+}
+/* line 236, ../scss/style.scss */
+.social-fb:hover, .social-tw:hover, .social-ig:hover {
+  background: #3b5998;
+  color: white;
+}
+
+/* line 244, ../scss/style.scss */
+.social-tw:hover {
+  background: #55acee;
+}
+
+/* line 251, ../scss/style.scss */
+.social-ig:hover {
+  background: #3f729b;
+}
+
+/* --------------- Responsive --------------- */
 @media screen and (max-width: 991px) {
-  /* line 277, ../scss/style.scss */
+  /* line 271, ../scss/style.scss */
   header {
     text-align: center;
   }
 
-  /* line 281, ../scss/style.scss */
-  .lamb-logos {
-    float: none;
-  }
-
-  /* line 285, ../scss/style.scss */
-  .social {
-    text-align: center;
-    margin: 40px 0 20px 0;
-  }
-
-  /* line 290, ../scss/style.scss */
+  /* line 275, ../scss/style.scss */
   button#submit {
     margin: 20px auto 0;
     display: block;
   }
 
-  /* line 295, ../scss/style.scss */
+  /* line 280, ../scss/style.scss */
   .recaptcha-wrapper {
     text-align: center;
   }
 
-  /* line 298, ../scss/style.scss */
+  /* line 283, ../scss/style.scss */
   .g-recaptcha {
     display: inline-block;
   }
 
-  /* line 302, ../scss/style.scss */
+  /* line 287, ../scss/style.scss */
   footer {
     margin-top: 40px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 310, ../scss/style.scss */
+  /* line 295, ../scss/style.scss */
   .row {
     margin-left: 0;
     margin-right: 0;
   }
 
-  /* line 317, ../scss/style.scss */
+  /* line 302, ../scss/style.scss */
   .overlay-bg {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(34, 34, 34, 0.7);
   }
 
-  /* line 321, ../scss/style.scss */
+  /* line 306, ../scss/style.scss */
   .form-wrapper {
     border: none;
     background: transparent;
