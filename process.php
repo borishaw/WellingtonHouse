@@ -66,7 +66,7 @@ if ($resp->isSuccess()) {
         $json_response['message'] = 'Message could not be sent.' . ' Please try again.' . ' Mailer Error: ' . $mail->ErrorInfo;
         die(json_encode($json_response));
     } else {
-        $json_response['message'] = 'Message has been sent';
+        $json_response['message'] = 'Thank you, your message has been sent';
         $json_response['success'] = 1;
         exit(json_encode($json_response));
     }
